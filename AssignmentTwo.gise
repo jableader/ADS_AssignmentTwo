@@ -61,6 +61,24 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1430794908" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1430794908">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1430794908" xil_pn:in_ck="-3030592928931659414" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1430794908">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <outfile xil_pn:name="BinaryToSSD.vhd"/>
+      <outfile xil_pn:name="ClockDivider.vhd"/>
+      <outfile xil_pn:name="Counter.vhd"/>
+      <outfile xil_pn:name="SevenSegmentDisplay.vhd"/>
+      <outfile xil_pn:name="TopLevel.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1430794908" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7788817275883802885" xil_pn:start_ts="1430794908">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
     <transform xil_pn:end_ts="1430793455" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1430793455">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
@@ -71,6 +89,8 @@
     <transform xil_pn:end_ts="1430793461" xil_pn:in_ck="-3030592928931659414" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-9094933833356982267" xil_pn:start_ts="1430793455">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="TopLevel.lso"/>
       <outfile xil_pn:name="TopLevel.ngc"/>
       <outfile xil_pn:name="TopLevel.ngr"/>
@@ -91,6 +111,7 @@
     <transform xil_pn:end_ts="1430793465" xil_pn:in_ck="-1844089844075542616" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1430793461">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TopLevel.bld"/>
       <outfile xil_pn:name="TopLevel.ngd"/>
       <outfile xil_pn:name="TopLevel_ngdbuild.xrpt"/>
@@ -101,6 +122,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TopLevel.gyd"/>
       <outfile xil_pn:name="TopLevel.mfd"/>
       <outfile xil_pn:name="TopLevel.nga"/>
@@ -118,12 +140,14 @@
     <transform xil_pn:end_ts="1430793475" xil_pn:in_ck="4420851648763911954" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1430793473">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TopLevel.jed"/>
     </transform>
     <transform xil_pn:end_ts="1430792897" xil_pn:in_ck="4420851648763898668" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1430792896">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1430792847" xil_pn:in_ck="4420851648763911954" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1430792845">
@@ -131,6 +155,7 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
