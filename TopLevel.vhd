@@ -7,8 +7,8 @@ entity TopLevel is
 	Port (
 			Clock, Active, Testmode, Reset : in std_logic;
 			Overflow : out std_logic := '1';
-			SegmentSelect : out std_logic_vector(6 downto 0);
-			AnodeSelect : out std_logic_vector(1 downto 0)
+			SegmentSelect : out std_logic_vector(0 to 6);
+			AnodeSelect : out std_logic_vector(0 to 1)
 		);
 end TopLevel;
 

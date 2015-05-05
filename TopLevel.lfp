@@ -1,5 +1,0 @@
-# begin LFP file C:\Users\Jableader\Documents\Xilinx\AssignmentTwo\TopLevel.lfp
-designfile TopLevel.vhd
-parttype xc9572xl-pc44-5
-bus_delimiter 0;
-set_busdelim_onsave 1;

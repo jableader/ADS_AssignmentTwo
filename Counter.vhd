@@ -32,7 +32,7 @@ begin
 				if lowerDigit = "1001" then
 					lowerDigit <= "0000";
 					
-					--If the upper digit is ready for overflow
+					--If the upper digit is ready for overflow (the next count will be 30 or 100)
 					if upperDigit = "1001" or (Testmode = '1' and upperDigit = "0010") then
 					
 						--Mark the overflow flag and reset it to 0

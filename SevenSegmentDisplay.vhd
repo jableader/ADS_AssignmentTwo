@@ -6,8 +6,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity SevenSegmentDisplay is
     Port ( Clock : in  STD_LOGIC;
            First, Second : in  STD_LOGIC_VECTOR (3 downto 0);
-           SegmentSelect : out  STD_LOGIC_VECTOR (6 downto 0);
-           LineSelect : out  STD_LOGIC_VECTOR (1 downto 0));
+           SegmentSelect : out  STD_LOGIC_VECTOR (0 to 6);
+           LineSelect : out  STD_LOGIC_VECTOR (0 to 1));
 end SevenSegmentDisplay;
 
 architecture Behavioral of SevenSegmentDisplay is

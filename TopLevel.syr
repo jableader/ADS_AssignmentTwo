@@ -4,7 +4,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -85,7 +85,8 @@ Entity <sevensegmentdisplay> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/Counter.vhd" in Library work.
 Architecture behavioral of Entity counter is up to date.
 Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/TopLevel.vhd" in Library work.
-Architecture behavioral of Entity toplevel is up to date.
+Entity <toplevel> compiled.
+Entity <toplevel> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -283,12 +284,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.29 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.28 secs
  
 --> 
 
-Total memory usage is 232428 kilobytes
+Total memory usage is 232396 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

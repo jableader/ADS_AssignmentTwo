@@ -1,0 +1,553 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "TopLevel";
+      var device = "XC9572XL";
+      signals = new Array("AnodeSelect0_SPECSIG","AnodeSelect1_SPECSIG","Overflow","SegmentSelect0_SPECSIG","SegmentSelect1_SPECSIG","SegmentSelect2_SPECSIG","SegmentSelect3_SPECSIG","SegmentSelect4_SPECSIG","SegmentSelect5_SPECSIG","SegmentSelect6_SPECSIG","clockDivcount0_SPECSIG","clockDivcount1_SPECSIG","clockDivcount2_SPECSIG","clockDivcount3_SPECSIG","clockDivcount4_SPECSIG","clockDivcount5_SPECSIG","clockDivcount6_SPECSIG","clockDivcount7_SPECSIG","ones0_SPECSIG","ones1_SPECSIG","ones2_SPECSIG","ones3_SPECSIG","slowClock","tens0_SPECSIG","tens1_SPECSIG","tens2_SPECSIG","tens3_SPECSIG");
+      sigNegs = new Array("OFF","OFF","OFF","ON","OFF","OFF","ON","ON","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","ON","ON","OFF","OFF");
+      sigTypes = new Array("T","D","T","","","","","","","","T","T","T","T","T","T","T","T","T","T","T","T","T","T","D","T","T");
+
+      
+        specSig["SegmentSelect3_SPECSIG"]=new Array("SegmentSelect<3>");
+      
+        specSig["SegmentSelect4_SPECSIG"]=new Array("SegmentSelect<4>");
+      
+        specSig["SegmentSelect5_SPECSIG"]=new Array("SegmentSelect<5>");
+      
+        specSig["SegmentSelect6_SPECSIG"]=new Array("SegmentSelect<6>");
+      
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["clockDivcount6_SPECSIG"]=new Array("clockDiv/count<6>");
+      
+        specSig["clockDivcount4_SPECSIG"]=new Array("clockDiv/count<4>");
+      
+        specSig["AnodeSelect0_SPECSIG"]=new Array("AnodeSelect<0>");
+      
+        specSig["AnodeSelect1_SPECSIG"]=new Array("AnodeSelect<1>");
+      
+        specSig["SegmentSelect0_SPECSIG"]=new Array("SegmentSelect<0>");
+      
+        specSig["SegmentSelect1_SPECSIG"]=new Array("SegmentSelect<1>");
+      
+        specSig["SegmentSelect2_SPECSIG"]=new Array("SegmentSelect<2>");
+      
+        specSig["tens3_SPECSIG"]=new Array("tens<3>");
+      
+        specSig["clockDivcount5_SPECSIG"]=new Array("clockDiv/count<5>");
+      
+        specSig["clockDivcount3_SPECSIG"]=new Array("clockDiv/count<3>");
+      
+        specSig["clockDivcount0_SPECSIG"]=new Array("clockDiv/count<0>");
+      
+        specSig["clockDivcount1_SPECSIG"]=new Array("clockDiv/count<1>");
+      
+        specSig["clockDivcount2_SPECSIG"]=new Array("clockDiv/count<2>");
+      
+        specSig["ones0_SPECSIG"]=new Array("ones<0>");
+      
+        specSig["ones1_SPECSIG"]=new Array("ones<1>");
+      
+        specSig["ones2_SPECSIG"]=new Array("ones<2>");
+      
+        specSig["ones3_SPECSIG"]=new Array("ones<3>");
+      
+        specSig["tens0_SPECSIG"]=new Array("tens<0>");
+      
+        specSig["tens1_SPECSIG"]=new Array("tens<1>");
+      
+        specSig["tens2_SPECSIG"]=new Array("tens<2>");
+      
+        specSig["clockDivcount7_SPECSIG"]=new Array("clockDiv/count<7>");
+      
+            pterms["FB1_1_1"]=new Array("/ones0_SPECSIG","/ones1_SPECSIG","ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_2_1"]=new Array("ones0_SPECSIG","ones1_SPECSIG","ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_2_2"]=new Array("ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_2_3"]=new Array("tens0_SPECSIG","tens1_SPECSIG","tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_2_4"]=new Array("tens0_SPECSIG","/tens1_SPECSIG","/tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_2_5"]=new Array("/tens0_SPECSIG","/tens1_SPECSIG","tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_4_1"]=new Array("ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_5_1"]=new Array("ones0_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_5_2"]=new Array("tens0_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_5_3"]=new Array("/ones1_SPECSIG","ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_5_4"]=new Array("tens0_SPECSIG","/tens1_SPECSIG","/tens2_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_5_5"]=new Array("/tens1_SPECSIG","tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_6_1"]=new Array("ones0_SPECSIG","ones1_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_6_2"]=new Array("ones1_SPECSIG","/ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_6_3"]=new Array("tens0_SPECSIG","tens1_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_6_4"]=new Array("tens0_SPECSIG","/tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_6_5"]=new Array("tens1_SPECSIG","/tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_7_1"]=new Array("ones0_SPECSIG","/ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_8_1"]=new Array("/ones1_SPECSIG","/ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_8_2"]=new Array("/tens1_SPECSIG","/tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_8_3"]=new Array("ones0_SPECSIG","ones1_SPECSIG","ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_8_4"]=new Array("tens0_SPECSIG","tens1_SPECSIG","tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB1_15_1"]=new Array("clockDivcount0_SPECSIG","clockDivcount1_SPECSIG","clockDivcount2_SPECSIG","clockDivcount3_SPECSIG","clockDivcount4_SPECSIG","clockDivcount5_SPECSIG");
+          
+            pterms["FB1_16_1"]=new Array("clockDivcount0_SPECSIG","clockDivcount1_SPECSIG","clockDivcount2_SPECSIG","clockDivcount3_SPECSIG","clockDivcount4_SPECSIG");
+          
+            pterms["FB1_17_1"]=new Array("clockDivcount0_SPECSIG","clockDivcount1_SPECSIG","clockDivcount2_SPECSIG","clockDivcount3_SPECSIG");
+          
+            pterms["FB1_18_1"]=new Array("clockDivcount0_SPECSIG","clockDivcount1_SPECSIG","clockDivcount2_SPECSIG");
+          
+            pterms["FB2_8_1"]=new Array("AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_14_1"]=new Array("ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_14_2"]=new Array("/ones0_SPECSIG","/ones1_SPECSIG","ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_14_3"]=new Array("tens0_SPECSIG","/tens1_SPECSIG","/tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_14_4"]=new Array("/tens0_SPECSIG","/tens1_SPECSIG","tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_14_5"]=new Array("/ones0_SPECSIG","/ones1_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_15_1"]=new Array("/ones1_SPECSIG","/ones2_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_15_2"]=new Array("/ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_15_3"]=new Array("/tens1_SPECSIG","/tens2_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_15_4"]=new Array("/tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_15_5"]=new Array("ones0_SPECSIG","ones1_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_16_1"]=new Array("tens0_SPECSIG","tens1_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_16_2"]=new Array("/tens0_SPECSIG","/tens1_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_17_1"]=new Array("ones0_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_17_2"]=new Array("ones2_SPECSIG","/ones3_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_17_3"]=new Array("tens0_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_17_4"]=new Array("/tens1_SPECSIG","/tens2_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_17_5"]=new Array("tens2_SPECSIG","/tens3_SPECSIG","/AnodeSelect0_SPECSIG");
+          
+            pterms["FB2_18_1"]=new Array("/ones1_SPECSIG","/ones2_SPECSIG","AnodeSelect0_SPECSIG");
+          
+            pterms["FB3_1_1"]=new Array("clockDivcount0_SPECSIG","clockDivcount1_SPECSIG");
+          
+            pterms["FB3_2_1"]=new Array("clockDivcount0_SPECSIG");
+          
+            pterms["FB3_4_1"]=new Array("/Reset");
+          
+            pterms["FB3_4_2"]=new Array("slowClock");
+          
+            pterms["FB3_4_3"]=new Array("/Active");
+          
+            pterms["FB3_5_1"]=new Array("tens0_SPECSIG","tens1_SPECSIG");
+          
+            pterms["FB3_5_2"]=new Array("/Reset");
+          
+            pterms["FB3_5_3"]=new Array("slowClock");
+          
+            pterms["FB3_5_4"]=new Array("/Active","ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","ones3_SPECSIG");
+          
+            pterms["FB3_6_1"]=new Array("/tens0_SPECSIG","tens1_SPECSIG","/tens2_SPECSIG","/tens3_SPECSIG","/Testmode");
+          
+            pterms["FB3_6_2"]=new Array("/Reset");
+          
+            pterms["FB3_6_3"]=new Array("slowClock");
+          
+            pterms["FB3_6_4"]=new Array("/Active","ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","ones3_SPECSIG");
+          
+            pterms["FB3_7_1"]=new Array("ones0_SPECSIG","ones1_SPECSIG");
+          
+            pterms["FB3_7_2"]=new Array("/Reset");
+          
+            pterms["FB3_7_3"]=new Array("slowClock");
+          
+            pterms["FB3_7_4"]=new Array("/Active");
+          
+            pterms["FB3_7_5"]=new Array("tens0_SPECSIG","tens1_SPECSIG","tens2_SPECSIG");
+          
+            pterms["FB3_8_1"]=new Array("tens0_SPECSIG","/tens1_SPECSIG","/tens2_SPECSIG","tens3_SPECSIG");
+          
+            pterms["FB3_8_2"]=new Array("/Reset");
+          
+            pterms["FB3_8_3"]=new Array("slowClock");
+          
+            pterms["FB3_8_4"]=new Array("/Active","ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","ones3_SPECSIG");
+          
+            pterms["FB3_8_5"]=new Array("ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","/tens0_SPECSIG","ones3_SPECSIG","tens1_SPECSIG","/tens2_SPECSIG","/tens3_SPECSIG","/Testmode","Overflow");
+          
+            pterms["FB3_9_1"]=new Array("/ones0_SPECSIG","/ones1_SPECSIG","ones2_SPECSIG","/ones3_SPECSIG","/Overflow");
+          
+            pterms["FB3_9_2"]=new Array("ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","tens0_SPECSIG","ones3_SPECSIG","/tens1_SPECSIG","/tens2_SPECSIG","tens3_SPECSIG","Overflow");
+          
+            pterms["FB3_9_3"]=new Array("/Reset");
+          
+            pterms["FB3_9_4"]=new Array("slowClock");
+          
+            pterms["FB3_9_5"]=new Array("/Active");
+          
+            pterms["FB3_10_1"]=new Array("ones0_SPECSIG","ones1_SPECSIG","ones2_SPECSIG");
+          
+            pterms["FB3_10_2"]=new Array("ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","ones3_SPECSIG");
+          
+            pterms["FB3_10_3"]=new Array("/Reset");
+          
+            pterms["FB3_10_4"]=new Array("slowClock");
+          
+            pterms["FB3_10_5"]=new Array("/Active");
+          
+            pterms["FB3_11_1"]=new Array("/ones0_SPECSIG");
+          
+            pterms["FB3_11_2"]=new Array("/ones1_SPECSIG","/ones2_SPECSIG","ones3_SPECSIG");
+          
+            pterms["FB3_11_3"]=new Array("/Reset");
+          
+            pterms["FB3_11_4"]=new Array("slowClock");
+          
+            pterms["FB3_11_5"]=new Array("/Active");
+          
+            pterms["FB3_12_1"]=new Array("tens0_SPECSIG","tens1_SPECSIG");
+          
+            pterms["FB3_12_2"]=new Array("/tens0_SPECSIG","/tens1_SPECSIG");
+          
+            pterms["FB3_12_3"]=new Array("/Reset");
+          
+            pterms["FB3_12_4"]=new Array("slowClock");
+          
+            pterms["FB3_12_5"]=new Array("/Active","ones0_SPECSIG","/ones1_SPECSIG","/ones2_SPECSIG","ones3_SPECSIG");
+          
+            pterms["FB3_13_1"]=new Array("/tens1_SPECSIG","/tens2_SPECSIG","tens3_SPECSIG");
+          
+            pterms["FB3_13_2"]=new Array("tens1_SPECSIG","/tens2_SPECSIG","/tens3_SPECSIG","/Testmode");
+          
+            pterms["FB4_17_1"]=new Array("clockDivcount0_SPECSIG","/clockDivcount1_SPECSIG","/clockDivcount2_SPECSIG","/clockDivcount3_SPECSIG","/clockDivcount4_SPECSIG","/clockDivcount5_SPECSIG","/clockDivcount6_SPECSIG","/clockDivcount7_SPECSIG");
+          
+            pterms["FB4_18_1"]=new Array("clockDivcount0_SPECSIG","clockDivcount1_SPECSIG","clockDivcount2_SPECSIG","clockDivcount3_SPECSIG","clockDivcount4_SPECSIG","clockDivcount5_SPECSIG","clockDivcount6_SPECSIG");
+          
+          d2["SegmentSelect3_SPECSIG"]=new Array("FB1_2_1","FB1_2_2","FB1_2_3","FB1_2_4","FB1_2_5","FB1_1_1");
+          
+            d2imp["SegmentSelect3_SPECSIG"]=new Array("1","1","1","1","1","1");
+          
+          d2["SegmentSelect4_SPECSIG"]=new Array("FB1_5_1","FB1_5_2","FB1_5_3","FB1_5_4","FB1_5_5","FB1_4_1");
+          
+            d2imp["SegmentSelect4_SPECSIG"]=new Array("1","1","1","1","1","1");
+          
+          d2["SegmentSelect5_SPECSIG"]=new Array("FB1_6_1","FB1_6_2","FB1_6_3","FB1_6_4","FB1_6_5","FB1_7_1");
+          
+            d2imp["SegmentSelect5_SPECSIG"]=new Array("1","1","1","1","1","1");
+          
+          d2["SegmentSelect6_SPECSIG"]=new Array("FB1_8_1","FB1_8_2","FB1_8_3","FB1_8_4");
+          
+            d2imp["SegmentSelect6_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["clockDivcount6_SPECSIG"]=new Array("FB1_15_1");
+          
+            d2imp["clockDivcount6_SPECSIG"]=new Array("1");
+          
+              gblclk["clockDivcount6_SPECSIG"]=new Array("Clock");
+            prld["clockDivcount6_SPECSIG"]="GND";
+          d2["clockDivcount5_SPECSIG"]=new Array("FB1_16_1");
+          
+            d2imp["clockDivcount5_SPECSIG"]=new Array("1");
+          
+              gblclk["clockDivcount5_SPECSIG"]=new Array("Clock");
+            prld["clockDivcount5_SPECSIG"]="GND";
+          d2["clockDivcount4_SPECSIG"]=new Array("FB1_17_1");
+          
+            d2imp["clockDivcount4_SPECSIG"]=new Array("1");
+          
+              gblclk["clockDivcount4_SPECSIG"]=new Array("Clock");
+            prld["clockDivcount4_SPECSIG"]="GND";
+          d2["clockDivcount3_SPECSIG"]=new Array("FB1_18_1");
+          
+            d2imp["clockDivcount3_SPECSIG"]=new Array("1");
+          
+              gblclk["clockDivcount3_SPECSIG"]=new Array("Clock");
+            prld["clockDivcount3_SPECSIG"]="GND";
+          d2["AnodeSelect0_SPECSIG"]=new Array("VCC");
+          
+            d2imp["AnodeSelect0_SPECSIG"]=new Array("1");
+          
+              gblclk["AnodeSelect0_SPECSIG"]=new Array("Clock");
+            prld["AnodeSelect0_SPECSIG"]="GND";
+          d2["AnodeSelect1_SPECSIG"]=new Array("FB2_8_1");
+          
+            d2imp["AnodeSelect1_SPECSIG"]=new Array("1");
+          
+              gblclk["AnodeSelect1_SPECSIG"]=new Array("Clock");
+            prld["AnodeSelect1_SPECSIG"]="VCC";
+          d2["SegmentSelect0_SPECSIG"]=new Array("FB2_14_1","FB2_14_2","FB2_14_3","FB2_14_4");
+          
+            d2imp["SegmentSelect0_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["SegmentSelect1_SPECSIG"]=new Array("FB2_15_1","FB2_15_2","FB2_15_3","FB2_15_4","FB2_15_5","FB2_14_5","FB2_16_1","FB2_16_2");
+          
+            d2imp["SegmentSelect1_SPECSIG"]=new Array("1","1","1","1","1","1","1","1");
+          
+          d2["SegmentSelect2_SPECSIG"]=new Array("FB2_17_1","FB2_17_2","FB2_17_3","FB2_17_4","FB2_17_5","FB2_18_1");
+          
+            d2imp["SegmentSelect2_SPECSIG"]=new Array("1","1","1","1","1","1");
+          
+          d2["clockDivcount2_SPECSIG"]=new Array("FB3_1_1");
+          
+            d2imp["clockDivcount2_SPECSIG"]=new Array("1");
+          
+              gblclk["clockDivcount2_SPECSIG"]=new Array("Clock");
+            prld["clockDivcount2_SPECSIG"]="GND";
+          d2["clockDivcount1_SPECSIG"]=new Array("FB3_2_1");
+          
+            d2imp["clockDivcount1_SPECSIG"]=new Array("1");
+          
+              gblclk["clockDivcount1_SPECSIG"]=new Array("Clock");
+            prld["clockDivcount1_SPECSIG"]="GND";
+          d2["clockDivcount0_SPECSIG"]=new Array("VCC");
+          
+            d2imp["clockDivcount0_SPECSIG"]=new Array("1");
+          
+              gblclk["clockDivcount0_SPECSIG"]=new Array("Clock");
+            prld["clockDivcount0_SPECSIG"]="VCC";
+          d2["ones0_SPECSIG"]=new Array("VCC");
+          
+            d2imp["ones0_SPECSIG"]=new Array("1");
+          
+              clk["ones0_SPECSIG"]=new Array("FB3_4_2");
+              
+                clkimp["ones0_SPECSIG"]=new Array("1");
+              
+              rst["ones0_SPECSIG"]=new Array("FB3_4_1");
+              
+                rstimp["ones0_SPECSIG"]=new Array("1");
+              
+          ce["ones0_SPECSIG"]=new Array("FB3_4_3");
+          
+            ceimp["ones0_SPECSIG"]=new Array("1");
+          prld["ones0_SPECSIG"]="GND";
+          d2["tens2_SPECSIG"]=new Array("FB3_5_1");
+          
+            d2imp["tens2_SPECSIG"]=new Array("1");
+          
+              clk["tens2_SPECSIG"]=new Array("FB3_5_3");
+              
+                clkimp["tens2_SPECSIG"]=new Array("1");
+              
+              rst["tens2_SPECSIG"]=new Array("FB3_5_2");
+              
+                rstimp["tens2_SPECSIG"]=new Array("1");
+              
+          ce["tens2_SPECSIG"]=new Array("FB3_5_4");
+          
+            ceimp["tens2_SPECSIG"]=new Array("1");
+          prld["tens2_SPECSIG"]="GND";
+          d2["tens0_SPECSIG"]=new Array("FB3_6_1");
+          
+            d2imp["tens0_SPECSIG"]=new Array("1");
+          
+              clk["tens0_SPECSIG"]=new Array("FB3_6_3");
+              
+                clkimp["tens0_SPECSIG"]=new Array("1");
+              
+              rst["tens0_SPECSIG"]=new Array("FB3_6_2");
+              
+                rstimp["tens0_SPECSIG"]=new Array("1");
+              
+          ce["tens0_SPECSIG"]=new Array("FB3_6_4");
+          
+            ceimp["tens0_SPECSIG"]=new Array("1");
+          prld["tens0_SPECSIG"]="GND";
+          d2["ones2_SPECSIG"]=new Array("FB3_7_1");
+          
+            d2imp["ones2_SPECSIG"]=new Array("1");
+          
+              clk["ones2_SPECSIG"]=new Array("FB3_7_3");
+              
+                clkimp["ones2_SPECSIG"]=new Array("1");
+              
+              rst["ones2_SPECSIG"]=new Array("FB3_7_2");
+              
+                rstimp["ones2_SPECSIG"]=new Array("1");
+              
+          ce["ones2_SPECSIG"]=new Array("FB3_7_4");
+          
+            ceimp["ones2_SPECSIG"]=new Array("1");
+          prld["ones2_SPECSIG"]="GND";
+          d2["tens3_SPECSIG"]=new Array("FB3_8_1","FB3_7_5");
+          
+            d2imp["tens3_SPECSIG"]=new Array("1","1");
+          
+              clk["tens3_SPECSIG"]=new Array("FB3_8_3");
+              
+                clkimp["tens3_SPECSIG"]=new Array("1");
+              
+              rst["tens3_SPECSIG"]=new Array("FB3_8_2");
+              
+                rstimp["tens3_SPECSIG"]=new Array("1");
+              
+          ce["tens3_SPECSIG"]=new Array("FB3_8_4");
+          
+            ceimp["tens3_SPECSIG"]=new Array("1");
+          prld["tens3_SPECSIG"]="GND";
+          d2["Overflow"]=new Array("FB3_9_1","FB3_9_2","FB3_8_5");
+          
+            d2imp["Overflow"]=new Array("1","1","1");
+          
+              clk["Overflow"]=new Array("FB3_9_4");
+              
+                clkimp["Overflow"]=new Array("1");
+              
+              set["Overflow"]=new Array("FB3_9_3");
+              
+                setimp["Overflow"]=new Array("1");
+              
+          ce["Overflow"]=new Array("FB3_9_5");
+          
+            ceimp["Overflow"]=new Array("1");
+          prld["Overflow"]="VCC";
+          d2["ones3_SPECSIG"]=new Array("FB3_10_1","FB3_10_2");
+          
+            d2imp["ones3_SPECSIG"]=new Array("1","1");
+          
+              clk["ones3_SPECSIG"]=new Array("FB3_10_4");
+              
+                clkimp["ones3_SPECSIG"]=new Array("1");
+              
+              rst["ones3_SPECSIG"]=new Array("FB3_10_3");
+              
+                rstimp["ones3_SPECSIG"]=new Array("1");
+              
+          ce["ones3_SPECSIG"]=new Array("FB3_10_5");
+          
+            ceimp["ones3_SPECSIG"]=new Array("1");
+          prld["ones3_SPECSIG"]="GND";
+          d2["ones1_SPECSIG"]=new Array("FB3_11_1","FB3_11_2");
+          
+            d2imp["ones1_SPECSIG"]=new Array("1","1");
+          
+              clk["ones1_SPECSIG"]=new Array("FB3_11_4");
+              
+                clkimp["ones1_SPECSIG"]=new Array("1");
+              
+              rst["ones1_SPECSIG"]=new Array("FB3_11_3");
+              
+                rstimp["ones1_SPECSIG"]=new Array("1");
+              
+          ce["ones1_SPECSIG"]=new Array("FB3_11_5");
+          
+            ceimp["ones1_SPECSIG"]=new Array("1");
+          prld["ones1_SPECSIG"]="GND";
+          d2["tens1_SPECSIG"]=new Array("FB3_12_1","FB3_12_2","FB3_13_1","FB3_13_2");
+          
+            d2imp["tens1_SPECSIG"]=new Array("1","1","1","1");
+          
+              clk["tens1_SPECSIG"]=new Array("FB3_12_4");
+              
+                clkimp["tens1_SPECSIG"]=new Array("1");
+              
+              rst["tens1_SPECSIG"]=new Array("FB3_12_3");
+              
+                rstimp["tens1_SPECSIG"]=new Array("1");
+              
+          ce["tens1_SPECSIG"]=new Array("FB3_12_5");
+          
+            ceimp["tens1_SPECSIG"]=new Array("1");
+          prld["tens1_SPECSIG"]="GND";
+          d2["slowClock"]=new Array("VCC");
+          
+            d2imp["slowClock"]=new Array("1");
+          
+              gblclk["slowClock"]=new Array("Clock");
+            
+          ce["slowClock"]=new Array("FB4_17_1");
+          
+            ceimp["slowClock"]=new Array("1");
+          prld["slowClock"]="GND";
+          d2["clockDivcount7_SPECSIG"]=new Array("FB4_18_1");
+          
+            d2imp["clockDivcount7_SPECSIG"]=new Array("1");
+          
+              gblclk["clockDivcount7_SPECSIG"]=new Array("Clock");
+            prld["clockDivcount7_SPECSIG"]="GND";
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

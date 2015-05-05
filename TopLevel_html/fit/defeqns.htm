@@ -1,0 +1,178 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FTCPE_AnodeSelect0: FTCPE port map (AnodeSelect(0),'1',Clock,'0','0');
+</td></tr><tr><td>
+FDCPE_AnodeSelect1: FDCPE port map (AnodeSelect(1),AnodeSelect(0),Clock,'0','0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+FTCPE_Overflow: FTCPE port map (Overflow,Overflow_T,slowClock,'0',NOT Reset,NOT Active);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overflow_T <= ((ones(0) AND NOT ones(1) AND NOT ones(2) AND NOT tens(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ones(3) AND tens(1) AND NOT tens(2) AND NOT tens(3) AND NOT Testmode AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Overflow)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ones(0) AND NOT ones(1) AND ones(2) AND NOT ones(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Overflow)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND NOT ones(1) AND NOT ones(2) AND tens(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ones(3) AND NOT tens(1) AND NOT tens(2) AND tens(3) AND Overflow));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SegmentSelect(0) <= NOT (((ones(0) AND NOT ones(1) AND NOT ones(2) AND NOT ones(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ones(0) AND NOT ones(1) AND ones(2) AND NOT ones(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND NOT tens(1) AND NOT tens(2) AND NOT tens(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(0) AND NOT tens(1) AND tens(2) AND NOT tens(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT AnodeSelect(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SegmentSelect(1) <= ((NOT ones(0) AND NOT ones(1) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND tens(1) AND NOT tens(3) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(0) AND NOT tens(1) AND NOT tens(3) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ones(1) AND NOT ones(2) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ones(2) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(1) AND NOT tens(2) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(2) AND NOT tens(3) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND ones(1) AND NOT ones(3) AND AnodeSelect(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SegmentSelect(2) <= ((NOT ones(1) AND NOT ones(2) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(2) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND NOT tens(3) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(1) AND NOT tens(2) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(2) AND NOT tens(3) AND NOT AnodeSelect(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SegmentSelect(3) <= NOT (((NOT ones(0) AND NOT ones(1) AND ones(2) AND NOT ones(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND ones(1) AND ones(2) AND NOT ones(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND NOT ones(1) AND NOT ones(2) AND NOT ones(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND tens(1) AND tens(2) AND NOT tens(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND NOT tens(1) AND NOT tens(2) AND NOT tens(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(0) AND NOT tens(1) AND tens(2) AND NOT tens(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT AnodeSelect(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SegmentSelect(4) <= NOT (((ones(0) AND NOT ones(1) AND NOT ones(2) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND NOT tens(3) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ones(1) AND ones(2) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND NOT tens(1) AND NOT tens(2) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(1) AND tens(2) AND NOT tens(3) AND NOT AnodeSelect(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SegmentSelect(5) <= NOT (((ones(0) AND NOT ones(2) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND ones(1) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(1) AND NOT ones(2) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND tens(1) AND NOT tens(3) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND NOT tens(2) AND NOT tens(3) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(1) AND NOT tens(2) AND NOT tens(3) AND NOT AnodeSelect(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SegmentSelect(6) <= NOT (((NOT ones(1) AND NOT ones(2) AND NOT ones(3) AND AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(1) AND NOT tens(2) AND NOT tens(3) AND NOT AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND ones(1) AND ones(2) AND NOT ones(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	AnodeSelect(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND tens(1) AND tens(2) AND NOT tens(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT AnodeSelect(0))));
+</td></tr><tr><td>
+FTCPE_clockDiv/count0: FTCPE port map (clockDiv/count(0),'1',Clock,'0','0');
+</td></tr><tr><td>
+FTCPE_clockDiv/count1: FTCPE port map (clockDiv/count(1),clockDiv/count(0),Clock,'0','0');
+</td></tr><tr><td>
+FTCPE_clockDiv/count2: FTCPE port map (clockDiv/count(2),clockDiv/count_T(2),Clock,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clockDiv/count_T(2) <= (clockDiv/count(0) AND clockDiv/count(1));
+</td></tr><tr><td>
+FTCPE_clockDiv/count3: FTCPE port map (clockDiv/count(3),clockDiv/count_T(3),Clock,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clockDiv/count_T(3) <= (clockDiv/count(0) AND clockDiv/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clockDiv/count(2));
+</td></tr><tr><td>
+FTCPE_clockDiv/count4: FTCPE port map (clockDiv/count(4),clockDiv/count_T(4),Clock,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clockDiv/count_T(4) <= (clockDiv/count(0) AND clockDiv/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clockDiv/count(2) AND clockDiv/count(3));
+</td></tr><tr><td>
+FTCPE_clockDiv/count5: FTCPE port map (clockDiv/count(5),clockDiv/count_T(5),Clock,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clockDiv/count_T(5) <= (clockDiv/count(0) AND clockDiv/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clockDiv/count(2) AND clockDiv/count(3) AND clockDiv/count(4));
+</td></tr><tr><td>
+FTCPE_clockDiv/count6: FTCPE port map (clockDiv/count(6),clockDiv/count_T(6),Clock,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clockDiv/count_T(6) <= (clockDiv/count(0) AND clockDiv/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clockDiv/count(2) AND clockDiv/count(3) AND clockDiv/count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clockDiv/count(5));
+</td></tr><tr><td>
+FTCPE_clockDiv/count7: FTCPE port map (clockDiv/count(7),clockDiv/count_T(7),Clock,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clockDiv/count_T(7) <= (clockDiv/count(0) AND clockDiv/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clockDiv/count(2) AND clockDiv/count(3) AND clockDiv/count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clockDiv/count(5) AND clockDiv/count(6));
+</td></tr><tr><td>
+FTCPE_ones0: FTCPE port map (ones(0),'1',slowClock,NOT Reset,'0',NOT Active);
+</td></tr><tr><td>
+FTCPE_ones1: FTCPE port map (ones(1),ones_T(1),slowClock,NOT Reset,'0',NOT Active);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ones_T(1) <= ((NOT ones(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ones(1) AND NOT ones(2) AND ones(3)));
+</td></tr><tr><td>
+FTCPE_ones2: FTCPE port map (ones(2),ones_T(2),slowClock,NOT Reset,'0',NOT Active);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ones_T(2) <= (ones(0) AND ones(1));
+</td></tr><tr><td>
+FTCPE_ones3: FTCPE port map (ones(3),ones_T(3),slowClock,NOT Reset,'0',NOT Active);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ones_T(3) <= ((ones(0) AND ones(1) AND ones(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ones(0) AND NOT ones(1) AND NOT ones(2) AND ones(3)));
+</td></tr><tr><td>
+FTCPE_slowClock: FTCPE port map (slowClock,'1',Clock,'0','0',slowClock_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slowClock_CE <= (clockDiv/count(0) AND NOT clockDiv/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clockDiv/count(2) AND NOT clockDiv/count(3) AND NOT clockDiv/count(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clockDiv/count(5) AND NOT clockDiv/count(6) AND NOT clockDiv/count(7));
+</td></tr><tr><td>
+FTCPE_tens0: FTCPE port map (tens(0),tens_T(0),slowClock,NOT Reset,'0',tens_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tens_T(0) <= (NOT tens(0) AND tens(1) AND NOT tens(2) AND NOT tens(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Testmode);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tens_CE(0) <= (NOT Active AND ones(0) AND NOT ones(1) AND NOT ones(2) AND ones(3));
+</td></tr><tr><td>
+FDCPE_tens1: FDCPE port map (tens(1),tens_D(1),slowClock,NOT Reset,'0',tens_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tens_D(1) <= ((NOT tens(1) AND NOT tens(2) AND tens(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(1) AND NOT tens(2) AND NOT tens(3) AND NOT Testmode)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND tens(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tens(0) AND NOT tens(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tens_CE(1) <= (NOT Active AND ones(0) AND NOT ones(1) AND NOT ones(2) AND ones(3));
+</td></tr><tr><td>
+FTCPE_tens2: FTCPE port map (tens(2),tens_T(2),slowClock,NOT Reset,'0',tens_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tens_T(2) <= (tens(0) AND tens(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tens_CE(2) <= (NOT Active AND ones(0) AND NOT ones(1) AND NOT ones(2) AND ones(3));
+</td></tr><tr><td>
+FTCPE_tens3: FTCPE port map (tens(3),tens_T(3),slowClock,NOT Reset,'0',tens_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tens_T(3) <= ((tens(0) AND tens(1) AND tens(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tens(0) AND NOT tens(1) AND NOT tens(2) AND tens(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tens_CE(3) <= (NOT Active AND ones(0) AND NOT ones(1) AND NOT ones(2) AND ones(3));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

@@ -1,0 +1,106 @@
+iMPACT Version: 14.5
+
+iMPACT log file Started on Tue May 05 12:28:20 2015
+
+Welcome to iMPACT
+iMPACT Version: 14.5
+Project: 'C:\Users\Jableader\Documents\Xilinx\DummyCount\\auto_project.ipf'already exists.
+Original project has been renamed to'C:\Users\Jableader\Documents\Xilinx\DummyCount\\auto_project_1.ipf'.
+Project: C:\Users\Jableader\Documents\Xilinx\DummyCount\\auto_project.ipfcreated.
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Connecting to TCF agent...
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb22.sys found.
+ File D:/Program/Xilinx/14.5/ISE_DS/ISE/bin/nt64/xusb22.sys not found.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+Cable autodetection failed.
+WARNING:iMPACT:923 - Can not find cable, check cable setup !// *** BATCH CMD : addDevice -p 1 -file"C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/TopLevel.jed"
+'1': Loading file'C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/TopLevel.jed' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading D:/Program/Xilinx/14.5/ISE_DS/ISE/xc9500xl/data/xc9572xl.bsd...
+INFO:iMPACT:501 - '1': Added Device xc9572xl successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setCable -port xsvf -file"C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/TopLevel.xsvf"
+INFO:iMPACT - Current time: 05/5/2015 12:29:06 PM
+WARNING:iMPACT - Warning: SVF Programming of 9500 series CPLDs is not supported   by every third-party boundary-scan tool provider. Please check for support   before using this SVF file to program a 9500 series device.
+// *** BATCH CMD : Program -p 1 -e -v 
+
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : setCable -port xsvf -file"C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/TopLevel.xsvf"
+INFO:iMPACT - Current time: 05/5/2015 12:34:17 PM
+Updating config fileC:/Users/Jableader/Documents/Xilinx/AssignmentTwo/TopLevel.jed...
+WARNING:iMPACT - Warning: SVF Programming of 9500 series CPLDs is not supported   by every third-party boundary-scan tool provider. Please check for support   before using this SVF file to program a 9500 series device.
+// *** BATCH CMD : Program -p 1 -e -v 
+
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : setCable -port xsvf -file"C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/TopLevel.xsvf"
+INFO:iMPACT - Current time: 05/5/2015 12:38:11 PM
+Updating config fileC:/Users/Jableader/Documents/Xilinx/AssignmentTwo/TopLevel.jed...
+WARNING:iMPACT - Warning: SVF Programming of 9500 series CPLDs is not supported   by every third-party boundary-scan tool provider. Please check for support   before using this SVF file to program a 9500 series device.
+// *** BATCH CMD : Program -p 1 -e -v 
+
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
