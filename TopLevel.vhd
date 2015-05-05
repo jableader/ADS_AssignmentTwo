@@ -17,6 +17,7 @@ architecture Behavioral of TopLevel is
 	signal slowClock, doReset, enableClock, enableTestMode : std_logic;
 
 begin
+	-- Hook up the clock divider and the display
 	clockDiv : ClockDivider port map (Clock, slowClock);
 	display: SevenSegmentDisplay port map (Clock, ones, tens, SegmentSelect, AnodeSelect);
 	
@@ -29,7 +30,7 @@ begin
 		ones, 
 		tens
 	);
-
+	
 	Overflow <= not hasOverflow;
 end Behavioral;
 
