@@ -18,8 +18,9 @@ architecture Behavioral of TopLevel is
 
 begin
 	clockDiv : ClockDivider port map (Clock, slowClock);
-	display: SevenSegDisplay port map (Clock, ones, tens, SegmentSelect, AnodeSelect);
+	display: SevenSegmentDisplay port map (Clock, ones, tens, SegmentSelect, AnodeSelect);
 	
+	-- Much of the IO on the DSX kit uses active low logic, which we will need to invert
 	count: Counter port map (SlowClock, 
 		not Active, 
 		not Testmode,
@@ -29,9 +30,6 @@ begin
 		tens
 	);
 
-	-- Much of the IO on the DSX kit uses active low logic, which we will need to invert
 	Overflow <= not hasOverflow;
-	isEnabled <= not Active;
-	
 end Behavioral;
 

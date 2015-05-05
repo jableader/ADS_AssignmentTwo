@@ -1,24 +1,7 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    10:50:56 05/05/2015 
--- Design Name: 
--- Module Name:    SevenSegmentDisplay - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+-- Allows us to display the given binary digits on the seven segment display
 
 entity SevenSegmentDisplay is
     Port ( Clock : in  STD_LOGIC;
@@ -33,6 +16,7 @@ signal lineToUse : std_logic := '0';
 signal numToUse : std_logic_vector(3 downto 0) := First;
 
 begin
+	--On each clock tick we alternate which number to display
 	process(Clock)
 	begin
 		if rising_edge(Clock) then
@@ -43,5 +27,5 @@ begin
 	LineSelect <= "10" when lineToUse = '1' else "01";
 	numToUse <= First when lineToUse = '1' else Second;
 	
-	c1: BinaryToSSD port map (lineToUse, SegmentSelect);
+	c1: BinaryToSSD port map (numToUse, SegmentSelect);
 end Behavioral;

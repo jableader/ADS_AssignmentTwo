@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+-- Convert binary digits 0-9 into a format to be displayed on the seven segment display
 entity BinaryToSSD is
 	port (
 		value : in std_logic_vector(3 downto 0);
