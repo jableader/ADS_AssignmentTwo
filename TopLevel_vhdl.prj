@@ -1,0 +1,5 @@
+vhdl work "C:\Users\Jableader\Documents\Xilinx\AssignmentTwo\BinaryToSSD.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\AssignmentTwo\SevenSegmentDisplay.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\AssignmentTwo\Counter.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\AssignmentTwo\ClockDivider.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\AssignmentTwo\TopLevel.vhd"

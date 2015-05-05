@@ -14,15 +14,15 @@ end TopLevel;
 
 architecture Behavioral of TopLevel is
 	signal ones, tens : std_logic_vector(3 downto 0);
-	signal slowClock, doReset, enableClock, enableTestMode : std_logic;
+	signal slowClock, hasOverflow : std_logic;
 
 begin
 	-- Hook up the clock divider and the display
-	clockDiv : ClockDivider port map (Clock, slowClock);
-	display: SevenSegmentDisplay port map (Clock, ones, tens, SegmentSelect, AnodeSelect);
+	clockDiv : entity ClockDivider port map (Clock, slowClock);
+	display: entity SevenSegmentDisplay port map (Clock, ones, tens, SegmentSelect, AnodeSelect);
 	
 	-- Much of the IO on the DSX kit uses active low logic, which we will need to invert
-	count: Counter port map (SlowClock, 
+	count: entity Counter port map (SlowClock, 
 		not Active, 
 		not Testmode,
 		not Reset, 

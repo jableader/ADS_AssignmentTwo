@@ -1,7 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-
 --Clock divider to turn a 20ms clock to 1s
 
 entity ClockDivider is
@@ -20,7 +19,7 @@ begin
 			--When the value is back to 1 we have recieved 250 pulses at 20ms apart
 			--meaning 0.5 seconds have past and we need to invert our clock
 			if count = 1 then 
-				DivClock <= inv(DivClock);
+				DivClock <= not DivClock;
 			end if;
 		end if;
 	end process;

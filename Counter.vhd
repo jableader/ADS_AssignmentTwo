@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Counter implementation, with Enable & Async Reset
 -- When Testmode = '1', counter will overflow at 19 rather than 99
@@ -32,7 +33,7 @@ begin
 					lowerDigit <= "0000";
 					
 					--If the upper digit is ready for overflow
-					if upperDigit = "1001" or (Test = '1' and upperDigit = "0010") then
+					if upperDigit = "1001" or (Testmode = '1' and upperDigit = "0010") then
 					
 						--Mark the overflow flag and reset it to 0
 						Overflow <= '1';

@@ -1,0 +1,5 @@
+vhdl work "BinaryToSSD.vhd"
+vhdl work "SevenSegmentDisplay.vhd"
+vhdl work "Counter.vhd"
+vhdl work "ClockDivider.vhd"
+vhdl work "TopLevel.vhd"

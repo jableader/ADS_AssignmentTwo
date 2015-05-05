@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-05-05T11:53:58</DateModified>
+  <DateModified>2015-05-05T12:07:30</DateModified>
   <ModuleName>TopLevel</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-05-05T12:07:20</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/iseconfig/SevenSegmentDisplay.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Jableader/Documents/Xilinx/AssignmentTwo</ImplementationReportsDirectory>
   <DateInitialized>2015-05-05T11:53:57</DateInitialized>
