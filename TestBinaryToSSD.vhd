@@ -10,7 +10,7 @@ ARCHITECTURE behavior OF TestBinaryToSSD IS
    signal output : std_logic_vector(0 to 6);
 BEGIN
 	
-	c1: work.BinaryToSSD port map (std_logic_vector(binaryDigit), output);
+	c1: entity work.BinaryToSSD port map (std_logic_vector(binaryDigit), output);
 	
    -- Stimulus process
    process
