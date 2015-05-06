@@ -18,7 +18,7 @@ architecture Behavioral of TopLevel is
 	
 begin
 	-- Hook up the clock divider and the display
-	clockDiv : entity work.ClockDivider port map (Clock, Reset, slowClock);
+	clockDiv : entity work.ClockDivider port map (Clock, Reset, Active, slowClock);
 	display: entity work.SevenSegmentDisplay port map (Clock, ones, tens, SegmentSelect, AnodeSelect);
 	
 	-- Much of the IO on the DSX kit uses active low logic, which we will need to invert
