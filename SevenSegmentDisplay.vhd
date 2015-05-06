@@ -27,5 +27,5 @@ begin
 	LineSelect <= "10" when lineToUse = '1' else "01";
 	numToUse <= First when lineToUse = '1' else Second;
 	
-	c1: entity BinaryToSSD port map (numToUse, SegmentSelect);
+	c1: entity work.BinaryToSSD port map (numToUse, SegmentSelect);
 end Behavioral;

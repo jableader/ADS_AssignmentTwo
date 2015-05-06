@@ -1,99 +1,37 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   13:01:49 05/05/2015
--- Design Name:   
--- Module Name:   C:/Users/Jableader/Documents/Xilinx/AssignmentTwo/clockDividerTest.vhd
--- Project Name:  AssignmentTwo
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: ClockDivider
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
+-- Simple test for the clock divider
  
 ENTITY clockDividerTest IS
 END clockDividerTest;
  
 ARCHITECTURE behavior OF clockDividerTest IS 
- 
-    -- Component Declaration for the Unit Under Test (UUT)
- 
-    COMPONENT ClockDivider
-    PORT(
-         Clock : IN  std_logic;
-         DivClock : OUT  std_logic
-        );
-    END COMPONENT;
-    
-
-   --Inputs
-   signal Clock : std_logic := '0';
-
- 	--Outputs
+   signal Clock, Reset : std_logic := '0';
    signal DivClock : std_logic;
-
-   -- Clock period definitions
-   constant Clock_period : time := 10 ns;
-   constant DivClock_period : time := 10 ns;
  
+   -- Clock period definitions
+   constant Clock_period : time := 2 ms; 
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
-   uut: ClockDivider PORT MAP (
-          Clock => Clock,
-          DivClock => DivClock
-        );
+	-- Port map the component
+   c1: entity work.ClockDivider PORT MAP (Clock, Reset, DivClock);
 
-   -- Clock process definitions
-   Clock_process :process
+   -- Main Clock Process
+   process
    begin
-		Clock <= '0';
+		Clock <= not Clock;
 		wait for Clock_period/2;
-		Clock <= '1';
-		wait for Clock_period/2;
-   end process;
- 
-   DivClock_process :process
-   begin
-		DivClock <= '0';
-		wait for DivClock_period/2;
-		DivClock <= '1';
-		wait for DivClock_period/2;
-   end process;
- 
-
-   -- Stimulus process
-   stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
-
-      wait for Clock_period*10;
-
-      -- insert stimulus here 
-
-      wait;
-   end process;
-
+   end process; 
+	
+	process
+	begin
+	
+		reset <= '0';
+		wait for 2200 ms;
+		reset <= '1';
+		wait;
+	
+	end process;
+	
 END;
