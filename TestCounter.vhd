@@ -7,7 +7,6 @@ END TestCounter;
 ARCHITECTURE behavior OF TestCounter IS 
    --Inputs
    signal Clock : std_logic := '0';
-   signal Enable : std_logic := '1';
    signal Testmode : std_logic := '1';
    signal Reset : std_logic := '0';
 
@@ -24,13 +23,24 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: entity work.Counter PORT MAP (
           Clock => Clock,
-          Enable => Enable,
           Testmode => Testmode,
           Reset => Reset,
           Overflow => Overflow,
           Ones => Ones,
           Tens => Tens
-        );
+        ); 
+		  
+	--	Used to demonstrate the reset process
+	-- Comment out if not needed
+--	reset_process :process
+--	begin
+--		Reset <= '0';
+--		wait for 30 ms;
+--		Reset <= '1';
+--		wait for 10 ms;
+--		Reset <= '0';
+--		wait;
+--	end process;
 		  
    -- Clock process definitions
    Clock_process :process

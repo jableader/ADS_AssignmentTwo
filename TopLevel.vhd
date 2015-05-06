@@ -17,13 +17,13 @@ architecture Behavioral of TopLevel is
 	signal slowClock, hasOverflow : std_logic;
 	
 begin
+	-- Much of the IO on the DSX kit uses active low logic, which we will need to invert
+
 	-- Hook up the clock divider and the display
-	clockDiv : entity work.ClockDivider port map (Clock, Reset, Active, slowClock);
+	clockDiv : entity work.ClockDivider port map (Clock, not Reset, not Active, slowClock);
 	display: entity work.SevenSegmentDisplay port map (Clock, ones, tens, SegmentSelect, AnodeSelect);
 	
-	-- Much of the IO on the DSX kit uses active low logic, which we will need to invert
 	count: entity work.Counter port map (SlowClock, 
-		not Active, 
 		not Testmode,
 		not Reset, 
 		hasOverflow, 

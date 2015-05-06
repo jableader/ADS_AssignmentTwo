@@ -7,7 +7,7 @@ use IEEE.NUMERIC_STD.ALL;
 -- When overflow has happened, the overflow line will be high for 5 seconds
 entity Counter is
 	Port (
-		Clock, Enable, Testmode, Reset : in std_logic;
+		Clock, Testmode, Reset : in std_logic;
 		Overflow : out std_logic := '0';
 		Ones, Tens : out std_logic_vector(3 downto 0)
 	);
@@ -27,29 +27,27 @@ begin
 			Overflow <= '0';
 		
 		elsif rising_edge(Clock) then
-			if Enable = '1' then
-				--If the lower digit is up to 9, we reset it to 0 and increment the upper digit
-				if lowerDigit = "1001" then
-					lowerDigit <= "0000";
-					
-					--If the upper digit is ready for overflow (the next count will be 30 or 100)
-					if upperDigit = "1001" or (Testmode = '1' and upperDigit = "0010") then
-					
-						--Mark the overflow flag and reset it to 0
-						Overflow <= '1';
-						upperDigit <= "0000";
-					else
-						
-						--Otherwise we are good to increment it
-						upperDigit <= upperDigit + 1;
-					end if;
+			--If the lower digit is up to 9, we reset it to 0 and increment the upper digit
+			if lowerDigit = "1001" then
+				lowerDigit <= "0000";
+				
+				--If the upper digit is ready for overflow (the next count will be 30 or 100)
+				if upperDigit = "1001" or (Testmode = '1' and upperDigit = "0010") then
+				
+					--Mark the overflow flag and reset it to 0
+					Overflow <= '1';
+					upperDigit <= "0000";
 				else
-					lowerDigit <= lowerDigit + 1;
 					
-					--If lowerDigit is up to 5 then we can set the overflow bit to 0
-					if lowerDigit = "0100" then
-						Overflow <= '0';
-					end if;
+					--Otherwise we are good to increment it
+					upperDigit <= upperDigit + 1;
+				end if;
+			else
+				lowerDigit <= lowerDigit + 1;
+				
+				--If lowerDigit is up to 5 then we can set the overflow bit to 0
+				if lowerDigit = "0100" then
+					Overflow <= '0';
 				end if;
 			end if;
 		end if;
